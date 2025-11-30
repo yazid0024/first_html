@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Portfolio</title>
+
+  <style>
+    :root{--bg:#f4f6f8;--card:#ffffff;--accent:#2b6ef6;--muted:#6b7280}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#111}
+    .center-wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
+    .login-card{width:100%;max-width:420px;background:var(--card);border-radius:12px;padding:28px;box-shadow:0 6px 24px rgba(17,24,39,0.08)}
+    .brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#5bc3ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    h1{font-size:1.25rem;margin:0}
+    p.lead{margin:8px 0 18px;color:var(--muted);font-size:0.95rem}
+    form{display:flex;flex-direction:column;gap:12px}
+    label{font-size:0.85rem;color:#111;margin-bottom:6px}
+    .input-group{display:flex;flex-direction:column}
+    input[type="text"],input[type="password"]{padding:10px 12px;border:1px solid #e6e9ef;border-radius:8px;font-size:0.95rem;outline:none}
+    input[type="text"]:focus,input[type="password"]:focus{box-shadow:0 0 0 4px rgba(43,110,246,0.08);border-color:var(--accent)}
+    .actions{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+    .remember{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:0.9rem}
+    button[type="submit"]{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
+    button[type="submit"]:hover{filter:brightness(.95)}
+    .foot{margin-top:16px;text-align:center;font-size:0.9rem;color:var(--muted)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    @media (max-width:420px){.login-card{padding:20px}}
+  </style>
+</head>
+<body>
+  <main class="center-wrap" role="main">
+    <section class="login-card" aria-labelledby="login-heading">
+      <div class="brand" aria-hidden="true">
+        <div class="logo">P</div>
+        <div>
+          <h1 id="login-heading">Portfolio Login</h1>
+          <p class="lead">Sign in to manage your portfolio and projects</p>
+        </div>
+      </div>
+
+      <form action="#" method="post" novalidate>
+        <div class="input-group">
+          <label for="username">Username or email</label>
+          <input id="username" name="username" type="text" autocomplete="username" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+        </div>
+
+        <div class="actions">
+          <label class="remember">
+            <input type="checkbox" name="remember" aria-label="Remember me" />
+            Remember me
+          </label>
+          <a href="#" aria-label="Forgot password">Forgot?</a>
+        </div>
+
+        <button type="submit">Sign in</button>
+      </form>
+
+      <p class="foot">New here? <a href="#" aria-label="Register">Create an account</a></p>
+    </section>
+  </main>
+</body>
+</html>
